@@ -1,0 +1,191 @@
+/* Sunset Red CSS Stylesheet*/
+
+* {
+    overflow: hidden;
+    font-family: 'Quicksand', 'Comic Sans MS', sans-serif;
+}
+
+
+
+*:focus {
+    outline: none;
+}
+
+body {
+   
+    color: #FFFFFF;
+    background-color: #000000;
+    background-image: url(./bgm_image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    -webkit-user-select: none;
+    user-select: none;
+
+
+
+}
+
+fieldset {
+    border-color: red;
+    border-radius: 6px;
+
+}
+
+input {
+    border-color: red;
+    background-color: #CC0000;
+    color: #FFFFFF;
+    border-radius: 6px;
+
+
+}
+
+select {
+    border-color: red;
+    background-color: #DD0000;
+
+}
+
+
+
+input {
+
+    -webkit-user-select: none;
+    user-select: text;
+}
+
+textarea {
+    border-color: red;
+    background-color: #CC0000;
+    color: #ffffff;
+}
+
+.no-underline {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: Myriad Pro, Comic Sans MS, sans-serif;
+}
+
+button {
+    border-color: red;
+    background-color: #CC0000;
+    color: #FFFFFF;
+    border-radius: 6px;
+    width: 15vw;
+    height: 8vh;
+    gap: 0.5vh;
+    margin: 2vh;
+    
+}
+
+.green_button {
+    border-color: green;
+    background-color: #00CC00;
+    color: #FFFFFF;
+    border-radius: 6px;
+    width: 15vw;
+    height: 8vh;
+    font-size: xx-large;
+}
+
+.blue_button {
+    border-color: blue;
+    background-color: #0090FF;
+    color: #FFFFFF;
+    border-radius: 6px;
+    width: 15vw;
+    height: 8vh;
+
+
+}
+
+.yellow_button {
+    border-color: yellow;
+    background-color: #CCCC00;
+    color: #000000;
+    border-radius: 6vh;
+    width: 15vw;
+    height: 8vh;
+}
+
+.small_button {
+    width: 5vw;
+    height: 4vh;
+    font-size: 0.9vw;
+}
+
+.medium_button {
+    width: 10vw;
+    height: 7vw;
+    font-size: 1.5vw;
+}
+
+
+
+
+
+
+
+.gray_button {
+    border-color: white;
+    background-color: gray;
+    color: #FFFFFF;
+    border-radius: 6px;
+    width: 15vw;
+    height: 8vh;
+}
+.glow {
+    color: white;
+    text-shadow: 0px 0px 10px white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#game {
+    display: none;
+}
+
+
+#responsesAndData > button {
+    background-color: #0090FF;
+    border-color: blue;
+    width: 40%;
+    
+}
+#responsesAndData {
+    display: flex;
+    width: 17.5%;
+    height: auto;
+    flex-direction: column;
+
+    
+}
+#menu {
+    display: flex;
+    align-items: center;
+    width: 17.5%;
+
+}
+
+#menu > button {
+    width: 40%;
+    height: 20%
+}
+#dialogData {
+    width: 65%;
+    text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+    height: auto;
+    font-size: x-large;
+}
