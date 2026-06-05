@@ -12,24 +12,35 @@
     <body>
         
         <audio id="bgm" src="./Beethoven_Moonlight_1st_movement.ogg" autoplay loop></audio>
+        <audio id="node" src="" autoplay></audio>
         <div id="game">
-            <div id="responsesAndData">
-                <button>Response 1</button>
-                <button>Response 2</button>
-                <button>Response 3</button>
+            <div class="half">
+                    <div id="responsesAndData">
+                        <button id="r1">Response 1</button>
+                        <button id="r2">Response 2</button>
+                        <button id="r3">Response 3</button>
+                    </div>
+                    <div id="menu">
+                        <button>Exit</button>
+                        <button>*</button>
+                        <button>Mute</button>
+                    </div>
             </div>
-            <br>
-            <div id="dialogData">
-                <p>Welcome to the Older Sibling's Survival Guide!</p>
+            <div class="half">
+                <div id="character_images">
+                    <div id="background">
+                        <img id="background-image" src="">
+                    </div>
+                    <div id="characters-overlay"></div>
+                </div>
+                <div id="dialogData">
+                    <p>Welcome to the Older Sibling's Survival Guide!</p>
+                </div>
+                
+                
+                
+                
             </div>
-            
-            <br>
-            <div id="menu">
-                <button>Exit</button>
-                <button>*</button>
-                <button>Mute</button>
-            </div>
-            <div id="character_images"></div>
         </div>
         
         <script src="./OSSG_main.js"></script>
