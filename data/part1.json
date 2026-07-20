@@ -1,0 +1,854 @@
+{
+  "part": 1,
+  "title": "Breakfast in the Kitchen",
+  "states": [
+    {
+      "stateID": 1,
+      "nodes": [
+        {
+          "nodeID": 1,
+          "dialogue": "<b>Welcome to the Older Sibling's Survival Guide!</b>",
+          "character": "Narrator",
+          "image": "",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 2 }
+          ]
+        },
+        {
+          "nodeID": 2,
+          "dialogue": "You are Sarah, the oldest and only sister in a household of five siblings.",
+          "character": "Narrator",
+          "image": "",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 3 }
+          ]
+        },
+        {
+          "nodeID": 3,
+          "dialogue": "Your four younger brothers <b>love</b> to prank you.",
+          "character": "Narrator",
+          "image": "",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 4 }
+          ]
+        },
+        {
+          "nodeID": 4,
+          "dialogue": "But if you make the right choices within the game, you can turn the tide of pranks off of you!",
+          "character": "Narrator",
+          "image": "",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 5 }
+          ]
+        },
+        {
+          "nodeID": 5,
+          "dialogue": "There is a big talent show coming up in several weeks. Your brothers will hear about the talent show and will probably want to sign up. However, you may need to choose between helping them or watching out for yourself.",
+          "character": "Narrator",
+          "image": "",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 6 }
+          ]
+        },
+        {
+          "nodeID": 6,
+          "dialogue": "Now, time to get started!",
+          "character": "Narrator",
+          "image": "",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 7 }
+          ]
+        },
+        {
+          "nodeID": 7,
+          "dialogue": "",
+          "character": "",
+          "image": "sarah_bedroom.png",
+          "responses": [],
+          "nextState": 2
+        }
+      ]
+    },
+    {
+      "stateID": 2,
+      "backgroundMusic": "./Beethoven_Moonlight_2nd_movement.ogg",
+      "nodes": [
+        {
+          "nodeID": 1,
+          "dialogue": "It is a beautiful spring morning. You wake up, ready to face the world.",
+          "character": "Narrator",
+          "image": "downstairs_hallway.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 2 }
+          ]
+        },
+        {
+          "nodeID": 2,
+          "dialogue": "You head downstairs to the kitchen, where your mother is waiting to talk to you.",
+          "character": "Narrator",
+          "image": "",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 3 }
+          ]
+        },
+        {
+          "nodeID": 3,
+          "dialogue": "*she glances up from her order pad* Good morning sweetie! How are you doing this morning?",
+          "character": "Mom",
+          "image": "mom_happy.png",
+          "responses": [
+            { "text": "*yawns* Good.", "nextNodeID": 5 },
+            { "text": "I'm starving!", "nextNodeID": 4 }
+          ]
+        },
+        {
+          "nodeID": 4,
+          "dialogue": "*laughs* Well, that's not the first time I've heard you say that! Now, what would you like to have for breakfast? You can have either blueberry waffles, oatmeal, or eggs. Which one would you like?",
+          "character": "Mom",
+          "image": "mom_ordering.png",
+          "responses": [
+            { "text": "Waffles!", "nextNodeID": 6 },
+            { "text": "Oatmeal!", "nextNodeID": 7 },
+            { "text": "Eggs!", "nextNodeID": 8 }
+          ]
+        },
+        {
+          "nodeID": 5,
+          "dialogue": "Great. Sarah, what would you like to have for breakfast? You can choose between blueberry waffles, oatmeal, or eggs. Which would you like?",
+          "character": "Mom",
+          "image": "mom_ordering.png",
+          "responses": [
+            { "text": "Waffles!", "nextNodeID": 6 },
+            { "text": "Oatmeal!", "nextNodeID": 7 },
+            { "text": "Eggs!", "nextNodeID": 8 }
+          ]
+        },
+        {
+          "nodeID": 6,
+          "dialogue": "Okay, waffles it is! Oh, Sarah, I forgot to tell you something.",
+          "character": "Mom",
+          "image": "mom_ordering.png",
+          "responses": [
+            { "text": "What is it?", "nextNodeID": 9 }
+          ],
+          "effects": {
+            "variables": { "breakfastFood": "waffles" }
+          }
+        },
+        {
+          "nodeID": 7,
+          "dialogue": "Okay, oatmeal it is! On a side note, before I forget, I need to tell you something.",
+          "character": "Mom",
+          "image": "mom_ordering.png",
+          "responses": [
+            { "text": "What is it, Mom?", "nextNodeID": 9 }
+          ],
+          "effects": {
+            "variables": { "breakfastFood": "oatmeal" }
+          }
+        },
+        {
+          "nodeID": 8,
+          "dialogue": "Sure, eggs it is! Oh, one more thing. Sarah, before you go, there's something I think you might be interested in.",
+          "character": "Mom",
+          "image": "mom_ordering.png",
+          "responses": [
+            { "text": "What is it, Mom?", "nextNodeID": 9 }
+          ],
+          "effects": {
+            "variables": { "breakfastFood": "eggs" }
+          }
+        },
+        {
+          "nodeID": 9,
+          "dialogue": "There's a talent show coming up in several weeks. I know you could do well if you signed up -- you've got a beautiful voice, and great talents! I would have told your brothers too, but they ran off to play some games before breakfast. You can find them in their bedroom.",
+          "character": "Mom",
+          "image": "mom_happy.png",
+          "responses": [
+            { "text": "Okay!", "nextNodeID": 10 }
+          ]
+        },
+        {
+          "nodeID": 10,
+          "dialogue": "",
+          "character": "",
+          "image": "",
+          "responses": [],
+          "nextState": 3
+        }
+      ]
+    },
+    {
+      "stateID": 3,
+      "nodes": [
+        {
+          "nodeID": 1,
+          "dialogue": "You head downstairs to the room where your brothers are in. It looks like they are playing a game.",
+          "character": "Narrator",
+          "image": "",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 2 }
+          ]
+        },
+        {
+          "nodeID": 2,
+          "dialogue": "Tommy: Aw, <b>MAAAAAAAAAAN!!!!</b> You win <b><i>AGAIN!?!?!</i></b>",
+          "character": "Tommy",
+          "image": "tommy_mad.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 3 }
+          ]
+        },
+        {
+          "nodeID": 3,
+          "dialogue": "Carl: You guessed it... The UNO Master has NOT lost his touch yet!",
+          "character": "Carl",
+          "image": "carl_happy.png",
+          "responses": [
+            { "text": "Hey, guys!", "nextNodeID": 4 },
+            { "text": "What are you doing?", "nextNodeID": 4 }
+          ]
+        },
+        {
+          "nodeID": 4,
+          "dialogue": "Kane: (absolutely terrified) How... how did you get in here?!",
+          "character": "Kane",
+          "image": "kane_upset.png",
+          "responses": [
+            { "text": "I just simply walked in here, that's all.", "nextNodeID": 5 },
+            { "text": "*stay silent*", "nextNodeID": 6 }
+          ]
+        },
+        {
+          "nodeID": 5,
+          "dialogue": "*phew* So you're not going to tell on us?",
+          "character": "Kane",
+          "image": "kane_neutral.png",
+          "responses": [
+            { "text": "What *were* you guys talking about just now, anyway?", "nextNodeID": 7 },
+            { "text": "Just wanted to see what you were up to, that was all.", "nextNodeID": 8 }
+          ]
+        },
+        {
+          "nodeID": 6,
+          "dialogue": "She could be a tattletale sent by Mom to spy on us and see if we're doing anything... *mischievious*!",
+          "character": "Tommy",
+          "image": "tommy_mad.png",
+          "responses": [
+            { "text": "I am NOT!", "nextNodeID": 9 }
+          ]
+        },
+        {
+          "nodeID": 7,
+          "dialogue": "None of your business. Anyways, what do you want?",
+          "character": "Kane",
+          "image": "kane_neutral.png",
+          "responses": [
+            { "text": "Kane, I hear you know of a lot of good board games.", "nextNodeID": 10 },
+            { "text": "Just checking in on you, that's all.", "nextNodeID": 11 }
+          ]
+        },
+        {
+          "nodeID": 8,
+          "dialogue": "Tommy, *shush*! Don't give it away!",
+          "character": "Carl",
+          "image": "carl_neutral.png",
+          "responses": [
+            { "text": "What was that about?", "nextNodeID": 7 }
+          ]
+        },
+        {
+          "nodeID": 9,
+          "dialogue": "That's true! We were just playing Fishtuki! It is like the funnest game in the history of the universe! We'll be doing UNO next!",
+          "character": "Tommy",
+          "image": "tommy_happy.png",
+          "responses": [
+            { "text": "*WAIT*", "nextNodeID": 12 }
+          ]
+        },
+        {
+          "nodeID": 10,
+          "dialogue": "That's true! We were just playing Fishtuki! It is like the funnest game in the history of the universe! We'll be doing UNO next!",
+          "character": "Tommy",
+          "image": "tommy_happy.png",
+          "responses": [
+            { "text": "*WAIT*", "nextNodeID": 12 }
+          ]
+        },
+        {
+          "nodeID": 11,
+          "dialogue": "Okay... but by the way you're acting, I still say that you're spying on us and you're going to rat us out to Mom!",
+          "character": "Tommy",
+          "image": "tommy_mad.png",
+          "responses": [
+            { "text": "*LEAVE*", "nextNodeID": 13 }
+          ],
+          "effects": {
+            "score": { "brothers": 0 }
+          }
+        },
+        {
+          "nodeID": 12,
+          "dialogue": "And I got over five hundred points by the time we were done!",
+          "character": "Kane",
+          "image": "kane_neutral.png",
+          "responses": [
+            { "text": "Wow! Can I join you guys in UNO?", "nextNodeID": 14 },
+            { "text": "That's really interesting, Kane! See you guys later!", "nextNodeID": 11 }
+          ]
+        },
+        {
+          "nodeID": 13,
+          "dialogue": "You leave the room and head back upstairs.",
+          "character": "Narrator",
+          "image": "",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 15 }
+          ]
+        },
+        {
+          "nodeID": 14,
+          "dialogue": "Of course! It's been a while since you last played with us! You're mainly too busy with your best friend, Alice!",
+          "character": "Carl",
+          "image": "carl_happy.png",
+          "responses": [
+            { "text": "Okay, let's do it! I bet I can beat you!", "nextNodeID": 16 }
+          ]
+        },
+        {
+          "nodeID": 15,
+          "dialogue": "",
+          "character": "",
+          "image": "",
+          "responses": [],
+          "nextState": 4
+        },
+        {
+          "nodeID": 16,
+          "dialogue": "",
+          "character": "",
+          "image": "",
+          "responses": [],
+          "nextState": 5
+        }
+      ]
+    },
+    {
+      "stateID": 4,
+      "nodes": [
+        {
+          "nodeID": 1,
+          "dialogue": "You decide to play UNO with your brothers...",
+          "character": "Narrator",
+          "image": "",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 2 }
+          ]
+        },
+        {
+          "nodeID": 2,
+          "dialogue": "*The first few turns roll swiftly by, with each of the siblings just quietly getting rid of all the cards in their hand they can. But then suddenly... Tommy makes a surprise attack on you!* HAHAHAHAHAHAAAAAAA!!! DRAW 4! What do ya say to THAT?! *You have another Draw 4 that you can stack. You know from past experience that he has a bad habit of taking risks with this card. Do you play it, or do you challenge?*",
+          "character": "Tommy",
+          "image": "tommy_happy.png",
+          "responses": [
+            { "text": "*Play your Draw 4.*", "nextNodeID": 3 },
+            { "text": "*Challenge him.*", "nextNodeID": 4 }
+          ]
+        },
+        {
+          "nodeID": 3,
+          "dialogue": "AARGH!! *You suspect that this move caught Kane unexpected. But then, after quickly reviewing his deck, he gets a mischevious look on his face.* Yet ANOTHER Draw 4!!! What do you say about THAT, Carl?",
+          "character": "Kane",
+          "image": "kane_upset.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 5 }
+          ]
+        },
+        {
+          "nodeID": 4,
+          "dialogue": "*You immediately challenge Tommy. Since the last card that was played was yellow, he throws down his deck -- and sure enough, there are not one, but two yellow cards! He looks at you angrily as he realizes that the incriminating evidence was discovered!* Oh, RATS!!! *You smile, knowing that you got the first victory -- but the game's not over yet!*",
+          "character": "Tommy",
+          "image": "tommy_mad.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 5 }
+          ]
+        },
+        {
+          "nodeID": 5,
+          "dialogue": "*Carl heaves out a sigh as he discovers that he has to draw 12 cards. But then a look of satisfaction -- as he finishes drawing and looks at his deck -- crosses his face.* I'll be back... and you'll really regret giving me these twelve cards... ALL of you!",
+          "character": "Carl",
+          "image": "carl_neutral.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 6 }
+          ]
+        },
+        {
+          "nodeID": 6,
+          "dialogue": "*As you and your siblings get into an all out drawing war, you suddenly discover a possible breakthrough.*",
+          "character": "Narrator",
+          "image": "",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 7 }
+          ]
+        },
+        {
+          "nodeID": 7,
+          "dialogue": "*You suddenly realize that since you have a reverse card, you'll reverse everything, and ruin Tommy's strategy. His strategy is to get someone to draw so many cards, that they won't really have time to get rid of all their cards, and they're out of the game. If you form an alliance with Kane, you could launch a surprise attack on Tommy, and he may not have much time to react. You decide to...*",
+          "character": "Narrator",
+          "image": "",
+          "responses": [
+            { "text": "Form an alliance with Kane and overthrow Tommy's strategy.", "nextNodeID": 8 },
+            { "text": "Try to overthrow his strategy by yourself, without warning.", "nextNodeID": 9 }
+          ]
+        },
+        {
+          "nodeID": 8,
+          "dialogue": "*\"psst -- Kane!\" Yeah? \"Listen, I have an idea. What if we decided to play a reverse card? I mean if both of us have enough draw cards, we could force Tommy to draw an enormous amount -- and he'd be out of the game!\" Hmm... what a great idea! Let's do it!*",
+          "character": "Kane",
+          "image": "kane_neutral.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 10 }
+          ]
+        },
+        {
+          "nodeID": 9,
+          "dialogue": "*You attempt to overthrow Tommy's strategy... by yourself. Without warning, you play a Draw 4. But since you didn't warn Kane or find out if he wanted to form an alliance with you, he isn't quite sure what you're doing, so he challenges you, and you end up having to draw four cards yourself. Your little strategy failed. Maybe you should have tried to ask Kane's help.*",
+          "character": "Narrator",
+          "image": "",
+          "responses": [
+            { "text": "*Look around at your siblings.*", "nextNodeID": 11 }
+          ],
+          "effects": {
+            "variables": { "unoGameWon": false }
+          }
+        },
+        {
+          "nodeID": 10,
+          "dialogue": "*With Kane, you discuss a strategy to overthrow the UNO Expert -- a.k.a. Tommy -- and win the game for either of you! The strategy will be to take advantage of Tommy's weaknesses in game -- his apparent risk-taking with the Draw 2s and Draw 4s. Using this strategy, along with stacking, he ends up having to draw so many cards, that although he can strike back, it goes straight back to himself. As you play down your last card, Tommy glares at you.* How could you beat me?! I thought I was the UNO Expert! *Turns out, you just beat all of the siblings. All the siblings gather around you, too shocked for words.*",
+          "character": "Tommy",
+          "image": "tommy_mad.png",
+          "responses": [
+            { "text": "*Look around at your siblings.*", "nextNodeID": 11 }
+          ],
+          "effects": {
+            "variables": { "unoGameWon": true },
+            "score": { "brothers": 1 }
+          }
+        },
+        {
+          "nodeID": 11,
+          "dialogue": "",
+          "character": "",
+          "image": "",
+          "responses": [],
+          "nextState": 6
+        }
+      ]
+    },
+    {
+      "stateID": 5,
+      "nodes": [
+        {
+          "nodeID": 1,
+          "dialogue": "You head back downstairs to the kitchen after your brothers finish their game.",
+          "character": "Narrator",
+          "image": "",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 2 }
+          ]
+        },
+        {
+          "nodeID": 2,
+          "dialogue": "Your mother greets you with a smile.",
+          "character": "Narrator",
+          "image": "",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 3 }
+          ]
+        },
+        {
+          "nodeID": 3,
+          "dialogue": "",
+          "character": "",
+          "image": "",
+          "responses": [],
+          "nextState": 7
+        }
+      ]
+    },
+    {
+      "stateID": 6,
+      "nodes": [
+        {
+          "nodeID": 1,
+          "dialogue": "*sigh* -- What in the world is going on here!?",
+          "character": "Mom",
+          "image": "mom_frustrated.png",
+          "responses": [
+            { "text": "*WAIT*", "nextNodeID": 2 },
+            { "text": "They ruined my breakfast, and they know it!", "nextNodeID": 3 }
+          ]
+        },
+        {
+          "nodeID": 2,
+          "dialogue": "N-n-n-nothing. Right, guys?",
+          "character": "Kane",
+          "image": "kane_neutral.png",
+          "responses": [
+            { "text": "*WAIT*", "nextNodeID": 4 },
+            { "text": "It's not true! They ruined my breakfast -- and they admitted it!!", "nextNodeID": 3 }
+          ]
+        },
+        {
+          "nodeID": 3,
+          "dialogue": "You did WHAT?!",
+          "character": "Mom",
+          "image": "mom_scolding.png",
+          "responses": [
+            { "text": "*WAIT*", "nextNodeID": 5 }
+          ],
+          "effects": {
+            "variables": { "breakfastPranksTattle": true }
+          }
+        },
+        {
+          "nodeID": 4,
+          "dialogue": "We didn't do anything wrong -- you tell 'em, Kane!",
+          "character": "Carl",
+          "image": "carl_neutral.png",
+          "responses": [
+            { "text": "*Stay silent.*", "nextNodeID": 6 },
+            { "text": "They pulled a prank on my breakfast!", "nextNodeID": 3 }
+          ]
+        },
+        {
+          "nodeID": 5,
+          "dialogue": "So, you're going to be a tattletale on us, huh? We just wanted to have a little fun!",
+          "character": "Tommy",
+          "image": "tommy_mad.png",
+          "responses": [
+            { "text": "*WAIT*", "nextNodeID": 7 }
+          ]
+        },
+        {
+          "nodeID": 6,
+          "dialogue": "Sigh... There WILL be consequences to your actions!",
+          "character": "Mom",
+          "image": "mom_frustrated.png",
+          "responses": [
+            { "text": "*Stay silent*", "nextNodeID": 8 }
+          ]
+        },
+        {
+          "nodeID": 7,
+          "dialogue": "I have told you -- on many occasions -- to stop pulling obnoxious pranks on your older sister. Since you refused to listen... Kane... no more playing board or computer games for an entire week!",
+          "character": "Mom",
+          "image": "mom_scolding.png",
+          "responses": [
+            { "text": "*WAIT*", "nextNodeID": 11 }
+          ]
+        },
+        {
+          "nodeID": 8,
+          "dialogue": "But Mom!! That's not fair --",
+          "character": "Kane",
+          "image": "kane_upset.png",
+          "responses": [
+            { "text": "*Your mom cuts in, interrupting Kane.*", "nextNodeID": 9 }
+          ]
+        },
+        {
+          "nodeID": 9,
+          "dialogue": "That IS fair, Kane.",
+          "character": "Mom",
+          "image": "mom_scolding.png",
+          "responses": [
+            { "text": "*WAIT*", "nextNodeID": 7 }
+          ]
+        },
+        {
+          "nodeID": 10,
+          "dialogue": "But MOOOOOOOM...",
+          "character": "Kane",
+          "image": "kane_upset.png",
+          "responses": [
+            { "text": "*WAIT*", "nextNodeID": 12 }
+          ]
+        },
+        {
+          "nodeID": 11,
+          "dialogue": "Furthermore... Tommy! Since you're usually the instigator, no TV nor computer time for two weeks!",
+          "character": "Mom",
+          "image": "mom_scolding.png",
+          "responses": [
+            { "text": "*WAIT*", "nextNodeID": 13 }
+          ]
+        },
+        {
+          "nodeID": 12,
+          "dialogue": "Furthermore... Tommy! Since you're usually the instigator, no TV nor computer time for two weeks!",
+          "character": "Mom",
+          "image": "mom_scolding.png",
+          "responses": [
+            { "text": "*WAIT*", "nextNodeID": 13 }
+          ]
+        },
+        {
+          "nodeID": 13,
+          "dialogue": "Hey, that's not fair!",
+          "character": "Tommy",
+          "image": "tommy_mad.png",
+          "responses": [
+            { "text": "*WAIT*", "nextNodeID": 14 }
+          ]
+        },
+        {
+          "nodeID": 14,
+          "dialogue": "And Carl... you'll have to do math problems for the rest of the day!",
+          "character": "Mom",
+          "image": "mom_scolding.png",
+          "responses": [
+            { "text": "*WAIT*", "nextNodeID": 15 }
+          ]
+        },
+        {
+          "nodeID": 15,
+          "dialogue": "I don't WANNA do math problems!! It's summertime!!",
+          "character": "Carl",
+          "image": "carl_neutral.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 16 }
+          ]
+        },
+        {
+          "nodeID": 16,
+          "dialogue": "*You have a big choice to make. If you choose to do nothing, your brothers will probably leave you alone, but they may not like you as much because you \"spoiled their fun\". Then again, if you tease your brothers back, you would get out your anger towards them, but you could get into trouble too. However... if you chose to forgive your brothers and ask Mom to drop their punishment -- and she would -- who knows what would happen? Your brothers could have a real change of heart.*",
+          "character": "Sarah",
+          "image": "sarah_thinking.png",
+          "responses": [
+            { "text": "*Do nothing.*", "nextNodeID": 17 },
+            { "text": "*Tease your brothers back.*", "nextNodeID": 18 },
+            { "text": "*Convince your mom to drop their punishment.*", "nextNodeID": 22 }
+          ]
+        },
+        {
+          "nodeID": 17,
+          "dialogue": "",
+          "character": "",
+          "image": "",
+          "responses": [],
+          "nextState": 7,
+          "effects": {
+            "variables": { "brothersCouncilAttending": false },
+            "score": { "brothers": 0 }
+          }
+        },
+        {
+          "nodeID": 18,
+          "dialogue": "*You start teasing your brothers -- it feels good to just sneer and let it all out.* Hahahaaaaaaaaaaa -- You got in trooooooouble and I diiiidn't! *But then... your mom gives you \"the eye\".*",
+          "character": "Sarah",
+          "image": "sarah_thinking.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 19 }
+          ],
+          "effects": {
+            "score": { "brothers": -1, "parents": -1 }
+          }
+        },
+        {
+          "nodeID": 19,
+          "dialogue": "SARAH! I try to help you when I can, but teasing your brothers isn't helping your case! You will have to wash the dishes and clean your room after breakfast!!",
+          "character": "Mom",
+          "image": "mom_scolding.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 20 }
+          ]
+        },
+        {
+          "nodeID": 20,
+          "dialogue": "Hmph -- serves her right! She knows better than to tease us! HA! *blows raspberry*",
+          "character": "Tommy",
+          "image": "tommy_smirking.png",
+          "responses": [
+            { "text": "*LEAVE*", "nextNodeID": 21 }
+          ],
+          "effects": {
+            "variables": { "brothersCouncilAttending": false }
+          }
+        },
+        {
+          "nodeID": 21,
+          "dialogue": "",
+          "character": "",
+          "image": "",
+          "responses": [],
+          "nextState": 7
+        },
+        {
+          "nodeID": 22,
+          "dialogue": "Actually, Mom... wait. Don't punish them. I think that they'll be much happier *UN*-grounded.",
+          "character": "Sarah",
+          "image": "sarah_explaining.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 23 }
+          ],
+          "effects": {
+            "score": { "brothers": 2, "parents": 2 }
+          }
+        },
+        {
+          "nodeID": 23,
+          "dialogue": "W-w-w-what? You're actually going to let us off the hook?",
+          "character": "Carl",
+          "image": "carl_happy.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 24 },
+            { "text": "If it's okay with Mom!", "nextNodeID": 25 }
+          ]
+        },
+        {
+          "nodeID": 24,
+          "dialogue": "Sarah... how could you forgive us like that?! I'm so sorry for having pulled that prank on your breakfast!",
+          "character": "Tommy",
+          "image": "tommy_ashamed.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 26 }
+          ]
+        },
+        {
+          "nodeID": 25,
+          "dialogue": "*sigh* I guess it's fine by me if you're okay with it, Sarah. You truly are something else.",
+          "character": "Mom",
+          "image": "mom_happy.png",
+          "responses": [
+            { "text": "Sure!", "nextNodeID": 27 }
+          ]
+        },
+        {
+          "nodeID": 26,
+          "dialogue": "*sigh* I guess it's fine by me if you're okay with it, Sarah. You truly are something else.",
+          "character": "Mom",
+          "image": "mom_happy.png",
+          "responses": [
+            { "text": "Sure!", "nextNodeID": 27 }
+          ]
+        },
+        {
+          "nodeID": 27,
+          "dialogue": "Thankyouthankyouthankyouthankyou thank yooooooooou!!! You saved our hides, Sarah!",
+          "character": "Carl",
+          "image": "carl_happy.png",
+          "responses": [
+            { "text": "You're welcome.", "nextNodeID": 28 },
+            { "text": "No problem!", "nextNodeID": 29 }
+          ]
+        },
+        {
+          "nodeID": 28,
+          "dialogue": "Yeah... thanks, Sarah.",
+          "character": "Tommy",
+          "image": "tommy_smirking.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 30 }
+          ]
+        },
+        {
+          "nodeID": 29,
+          "dialogue": "Yeah... thanks, Sarah.",
+          "character": "Tommy",
+          "image": "tommy_smirking.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 30 }
+          ]
+        },
+        {
+          "nodeID": 30,
+          "dialogue": "*Kane talks with the other brothers, including Xavier, and they all say, \"AYE!\" Sarah, what do you think about attending the next Brothers Council? It's a daily meeting that we have to discuss our... plans.",
+          "character": "Kane",
+          "image": "kane_neutral.png",
+          "responses": [
+            { "text": "Sure! I'll go! Where and when is it?", "nextNodeID": 31 },
+            { "text": "Hmm... no thanks, but thanks for the offer!", "nextNodeID": 32 }
+          ]
+        },
+        {
+          "nodeID": 31,
+          "dialogue": "It's in Kane's bedroom, and we'll be hosting it immediately after breakfast!",
+          "character": "Carl",
+          "image": "carl_happy.png",
+          "responses": [
+            { "text": "I'll be there!", "nextNodeID": 33 },
+            { "text": "Actually, I've changed my mind, but it was nice of you to invite me!", "nextNodeID": 32 }
+          ]
+        },
+        {
+          "nodeID": 32,
+          "dialogue": "Okay... *disappointed sigh* See you, Sarah.",
+          "character": "Tommy",
+          "image": "tommy_mad.png",
+          "responses": [
+            { "text": "*Finish your breakfast.*", "nextNodeID": 34 }
+          ],
+          "effects": {
+            "variables": { "brothersCouncilAttending": false },
+            "score": { "brothers": 0 }
+          }
+        },
+        {
+          "nodeID": 33,
+          "dialogue": "See you there, Sarah! *Kane and the other siblings run off to play a board game.*",
+          "character": "Kane",
+          "image": "kane_neutral.png",
+          "responses": [
+            { "text": "*Finish your breakfast.*", "nextNodeID": 34 }
+          ],
+          "effects": {
+            "variables": { "brothersCouncilAttending": true },
+            "score": { "brothers": 1 }
+          }
+        },
+        {
+          "nodeID": 34,
+          "dialogue": "",
+          "character": "",
+          "image": "",
+          "responses": [],
+          "endPart": true
+        }
+      ]
+    },
+    {
+      "stateID": 7,
+      "nodes": [
+        {
+          "nodeID": 1,
+          "dialogue": "Part 1 Complete!",
+          "character": "Narrator",
+          "image": "",
+          "responses": [
+            { "text": "Continue to Part 2", "nextNodeID": 2 }
+          ]
+        },
+        {
+          "nodeID": 2,
+          "dialogue": "",
+          "character": "",
+          "image": "",
+          "responses": [],
+          "nextPart": 2
+        }
+      ]
+    }
+  ],
+  "gameVariables": {
+    "breakfastFood": "",
+    "unoGameWon": false,
+    "breakfastPranks": false,
+    "breakfastPranksTattle": false,
+    "brothersCouncilAttending": false,
+    "siblingRelationship": 0,
+    "brothersScore": 0,
+    "parentsScore": 0,
+    "siblingScore": 0
+  }
+}
