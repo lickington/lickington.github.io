@@ -1,0 +1,235 @@
+{
+  "part": 2,
+  "title": "Lunch and the Brothers' Council",
+  "states": [
+    {
+      "stateID": 1,
+      "nodes": [
+        {
+          "nodeID": 1,
+          "dialogue": "You arrive at the Brothers Council meeting in Kane's bedroom.",
+          "character": "Narrator",
+          "image": "",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 2 }
+          ]
+        },
+        {
+          "nodeID": 2,
+          "dialogue": "If you didn't attend the council, you head to a different part of the house.",
+          "character": "Narrator",
+          "image": "",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 3 }
+          ],
+          "condition": "!brothersCouncilAttending"
+        },
+        {
+          "nodeID": 3,
+          "dialogue": "",
+          "character": "",
+          "image": "",
+          "responses": [],
+          "nextState": 2,
+          "condition": "!brothersCouncilAttending"
+        },
+        {
+          "nodeID": 3,
+          "dialogue": "",
+          "character": "",
+          "image": "",
+          "responses": [],
+          "nextState": 2,
+          "condition": "brothersCouncilAttending"
+        }
+      ]
+    },
+    {
+      "stateID": 2,
+      "nodes": [
+        {
+          "nodeID": 1,
+          "dialogue": "Gentlemen -- and lady, too -- I call the 200th Brothers Council Meeting to ORDER!",
+          "character": "Tommy",
+          "image": "tommy_smirking.png",
+          "responses": [
+            { "text": "*WAIT*", "nextNodeID": 2 },
+            { "text": "*Start clapping and whooping.*", "nextNodeID": 2 }
+          ]
+        },
+        {
+          "nodeID": 2,
+          "dialogue": "HOORAY!!! *clapping and hooting for joy*",
+          "character": "Carl",
+          "image": "carl_happy.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 3 },
+            { "text": "Wait, this is the 200th meeting? I didn't know that!", "nextNodeID": 4 }
+          ]
+        },
+        {
+          "nodeID": 3,
+          "dialogue": "Yayyayayayayayayayayyy!!! Tommy? Will you play *Mind Your Manners* with me??",
+          "character": "Xavier",
+          "image": "xavier_cheering.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 5 }
+          ]
+        },
+        {
+          "nodeID": 4,
+          "dialogue": "Of course -- I've been keeping careful track of the last 199 meetings so far. This is a real important milestone... and also our most important meeting YET!",
+          "character": "Kane",
+          "image": "kane_neutral.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 3 }
+          ]
+        },
+        {
+          "nodeID": 5,
+          "dialogue": "Xavier -- if you will mind YOUR manners and STOP INTERRUPTING... We can play that. In the mean time, we need to discuss our latest plans for the day. But first... Kane?",
+          "character": "Tommy",
+          "image": "tommy_mad.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 6 },
+            { "text": "Wait, what kinds of plans do you guys talk about here?", "nextNodeID": 7 }
+          ]
+        },
+        {
+          "nodeID": 6,
+          "dialogue": "Everyone start by standing up. It's time for the Pledge of Brotherly Allegiance! -- *everyone starts reciting the pledge* I pledge my allegience to the Brothers Council... and promise that whatever plans discussed here -- no matter how gross, amazing, or funny they may be -- will be kept secret unless otherwise stated by Tommy, the Council Founder.",
+          "character": "Kane",
+          "image": "kane_explaining.png",
+          "responses": [
+            { "text": "*Recite the pledge.*", "nextNodeID": 8 }
+          ]
+        },
+        {
+          "nodeID": 7,
+          "dialogue": "Plans like, what games should we play today, what pranks should we pull... as well as upcoming events that the whole family participates in.",
+          "character": "Kane",
+          "image": "kane_explaining.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 10 }
+          ]
+        },
+        {
+          "nodeID": 8,
+          "dialogue": "Excellent. For the 200th Meeting of the Brothers Council... Kane? Let's discuss prank plans for today.",
+          "character": "Tommy",
+          "image": "tommy_smirking.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 9 }
+          ]
+        },
+        {
+          "nodeID": 9,
+          "dialogue": "I do not have any ideas for pranks today, actually. Carl, do you have any ideas?",
+          "character": "Kane",
+          "image": "kane_explaining.png",
+          "responses": [
+            { "text": "*WAIT*", "nextNodeID": 11 }
+          ]
+        },
+        {
+          "nodeID": 10,
+          "dialogue": "That's why you get pranked by us so strategically sometimes! Remember -- the info discussed here is CONFEDENTIAL. That means that info cannot be shared with ANYONE at ALL unless we permit it! Matter of fact... let's start with the Pledge of Brotherly Allegiance before we discuss our... plans.",
+          "character": "Kane",
+          "image": "kane_neutral.png",
+          "responses": [
+            { "text": "Okay, I'll remember that.", "nextNodeID": 6 }
+          ]
+        },
+        {
+          "nodeID": 11,
+          "dialogue": "Hmm... let me think... I think I -- YES, THAT'S IT! -- *Kane looks at him expectingly.* -- No wait, I lost it. Tommy, do you have any ideas?",
+          "character": "Carl",
+          "image": "carl_happy.png",
+          "responses": [
+            { "text": "*WAIT*", "nextNodeID": 12 }
+          ]
+        },
+        {
+          "nodeID": 12,
+          "dialogue": "Yes... I do. *smirking* Matter of fact, I have an idea for the greatest prank ever. What if we gathered up some sticks... and a couple of other things... and started up a FIRE... INDOORS?!?",
+          "character": "Tommy",
+          "image": "tommy_smirking.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 13 }
+          ]
+        },
+        {
+          "nodeID": 13,
+          "dialogue": "Hmm... for once, I myself am not so sure. I mean, we could get into really big trouble!",
+          "character": "Carl",
+          "image": "carl_neutral.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 14 }
+          ]
+        },
+        {
+          "nodeID": 14,
+          "dialogue": "Are you going to chicken out on the Brothers Council? I thought you took the Pledge of Brotherly Allegience!",
+          "character": "Tommy",
+          "image": "tommy_mad.png",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 15 }
+          ]
+        },
+        {
+          "nodeID": 15,
+          "dialogue": "",
+          "character": "",
+          "image": "",
+          "responses": [],
+          "nextState": 3
+        }
+      ]
+    },
+    {
+      "stateID": 3,
+      "nodes": [
+        {
+          "nodeID": 1,
+          "dialogue": "Sarah, Dad and I need to talk to you.",
+          "character": "Mom",
+          "image": "mom_happy.png",
+          "responses": [
+            { "text": "What is it?", "nextNodeID": 2 },
+            { "text": "Uh-oh... what is it?", "nextNodeID": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "stateID": 4,
+      "nodes": [
+        {
+          "nodeID": 1,
+          "dialogue": "You approach your parents' room cautiously.",
+          "character": "Narrator",
+          "image": "",
+          "responses": [
+            { "text": "*NEXT*", "nextNodeID": 2 }
+          ]
+        }
+      ]
+    }
+  ],
+  "gameVariables": {
+    "attemptedTattleFirePrank": false,
+    "attemptCompromiseFirePrank": false,
+    "successCompromiseFirePrank": false,
+    "brothersFirePrankPunishment": "",
+    "brothersCampfireDo": false,
+    "breakfastFood": "",
+    "unoGameWon": false,
+    "breakfastPranks": false,
+    "breakfastPranksTattle": false,
+    "brothersCouncilAttending": false,
+    "siblingRelationship": 0,
+    "brothersScore": 0,
+    "parentsScore": 0,
+    "siblingScore": 0
+  }
+}
