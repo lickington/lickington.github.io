@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Older Sibling's Survival Guide</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="./styles.css">
+	</head>
+	<body>
+	<button id="play1">Play</button>
+	<div class="slide" id="main-menu">
+		<h1>Welcome to the Older Sibling's Survival Guide</h1>
+		<button id="play">Play!</button>
+		<button id="credits">Credits</button>
+	</div>
+	<div class="slide" id="chapter-selection">
+		<h1>Chapter Selection</h1>
+		<div class="dialogUX">
+			<h2 id="chapterTitle">Lorem Ipsum</h2>
+			<p id="description">Lorem Ipsum</p>	
+			<button id="previous">Prev.</button>
+			<button id="start">Play</button>
+			<button id="next">Next</button>
+			<p>Enter in your dialogue code:</p>
+			<input id="enterInID" type="text"/>
+			<button id="test">TEST!</button>
+			<br>
+		</div>
+	</div>	
+	<div class="slide" id="dialogue">
+		<div id="relationshipContainer">
+    <div id="siblingRelationship" class="score">
+        <p>Sibling Relationship:</p>
+        <p id="siblingScore">😐</p>
+    </div>
+
+    <div id="parentRelationship" class="score">
+        <p>Parent Relationship:</p>
+        <p id="parentScore">😐</p>
+    </div>
+</div>
+		
+		<p id="dialogueP"></p>
+		<img id="background" src="./background/sarahs_bedroom.png">
+		<img id="character" src="">
+		<audio autoplay id="music" loop>
+			<source src=""></source>
+		</audio>
+		<audio autoplay id="characterAudio">
+			<source src=""></source>
+		</audio>
+		<audio autoplay id="sfx">
+			<source src=""></source>
+		</audio>
+		<div class="choices-container">
+			<button id="response1"></button>
+			<button id="response2"></button>
+			<button id="response3"></button>
+		</div>
+		
+	</div>
+	<div class="slide" id="creditsSlide">
+		<h1>Credits</h1>
+		<p>Story by Shiloh S. Space</p>
+		<p>All images have been created with various AI platforms. ChatGPT and Microsoft Designer are just two of the ones the author remembers using.</p>
+		<p>Voices: (soon to be added!)</p>
+		<p>Planned voices:</p>
+		<ul>
+			<li>The Narrator: Shiloh S. Space</li>
+			<li>Sarah, Alice, Mom, Dad, the Talent Show Announcer, and other grown-up characters: AI voices</li>
+			<li>Tommy, Kane, Carl, and Xavier: real kids whose identities will not be revealed for the sake of privacy</li>
+		</ul>
+		<button id="backToMainMenu">Back</button>
+	</div>
+	<script src="./script.js"></script>
+	</body>
+</html>

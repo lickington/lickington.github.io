@@ -1,0 +1,234 @@
+
+@font-face {
+  font-family: "Google Sans Flex";
+  src: url('./fonts/GoogleSansFlex-VariableFont_GRAD,ROND,opsz,slnt,wdth,wght.ttf') format('truetype');
+  font-weight: 100 1000;
+  font-stretch: 25% 151%;
+}
+@keyframes gradeShift {
+  0% {
+	  
+	  transform: scale(0.99);
+    font-variation-settings: "GRAD" 0, "ROND" 100;
+  }
+  50% {
+	  
+	  transform: scale(1.01);
+    font-variation-settings: "GRAD" 100, "ROND" 100;
+  }
+  100% {
+	  transform: scale(0.99);
+	 
+	font-variation-settings: "GRAD" 0, "ROND" 100;
+  }
+  
+}
+
+@keyframes buttonPush {
+	0% {
+		transform: scale(1);
+		
+	}
+	100% {
+		transform: scale(0.9);
+	}
+}
+
+
+@keyframes glow { 
+	0% {
+		text-shadow: 0px 0px 5px #FFFFFF;
+		
+	}
+	50%{ 
+		text-shadow: 0px 0px 8px #FFFFFF;
+	}
+	100%{
+		text-shadow: 0px 0px 5px #FFFFFF;
+	}
+}
+@keyframes glowDark { 
+	0% {
+		text-shadow: 0px 0px 5px #000000;
+		
+	}
+	50%{ 
+		text-shadow: 0px 0px 8px #000000;
+	}
+	100%{
+		text-shadow: 0px 0px 5px #000000;
+	}
+}
+* {
+  font-family: "Google Sans Flex";
+  font-variation-settings: "ROND" 100;
+  
+}
+body {
+	background-color: #111111;
+}
+
+*:not(button) {
+	color: white;
+	animation: glow 2s infinite ease-in-out;
+}
+button:hover{
+animation: gradeShift 2s infinite ease-in-out;
+
+}
+button:active{
+	animation: buttonPush 0.2s linear 0s 1 normal forwards;
+}
+#play {
+background-color: #11DD11;
+font-size: 50px;
+}
+
+#credits { 
+background-color: #1111FF;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+}
+.slide { 
+	display: none;
+	aspect-ratio: 16/9;
+	height: 80vh;
+	width: auto;
+}
+
+.slide.active {
+	
+	display: block;
+}
+/* DIALOGUE SLIDE LAYOUT */
+#dialogue {
+	position: relative;
+	
+	
+	flex-direction: column;
+	overflow: hidden;
+}
+
+/* BACKGROUND IMAGE */
+#dialogue #background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 1;
+}
+
+/* CHARACTER IMAGE - Always centered */
+#dialogue #character {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	max-height: 70%;
+	width: auto;
+	object-fit: contain;
+	display: none; /* Hidden by default */
+}
+
+/* Show character when talking */
+#dialogue.talking #character {
+	display: block;
+}
+
+/* DIALOGUE TEXT BOX */
+#dialogue #dialogueP {
+	position: relative;
+	z-index: 3;
+	padding: 20px;
+	font-size: 18px;
+	line-height: 1.6;
+	border-radius: 8px;
+	margin: 20px;
+	background: rgba(0, 0, 0, 0.75); /* Dark semi-transparent background */
+}
+
+/* When NOT talking (dialogue at top) */
+#dialogue:not(.talking) #dialogueP {
+	order: -1;
+	background: rgba(0, 0, 0, 0.75); /* Same dark background for consistency */
+	flex-shrink: 0;
+	margin-bottom: 40px;
+}
+
+/* When talking (dialogue at bottom with dark background) */
+#dialogue.talking #dialogueP {
+	background: rgba(0, 0, 0, 0.85); /* Slightly darker when talking */
+	margin-top: auto;
+	margin-bottom: 20px;
+}
+
+/* CHOICE BUTTONS CONTAINER */
+#dialogue .choices-container {
+	display: flex;
+	gap: 20px;
+	padding: 20px;
+	justify-content: center;
+	z-index: 3;
+	position: relative;
+	flex-wrap: wrap;
+}
+
+#dialogue button {
+	background: #0066cc;
+	color: white;
+	border: none;
+	padding: 15px 30px;
+	font-size: 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	flex: 1;
+	min-width: 150px;
+	max-width: 300px;
+	transition: background 0.3s ease;
+}
+
+#dialogue button:hover {
+	background: #0052a3;
+}
+#siblingRelationship {
+	display: flex;
+	background-color: #0066cc;
+}
+#parentRelationship {
+	display: flex;
+	background-color: #cc6600;
+}
+#siblingRelationship,
+#parentRelationship {
+    position: relative;
+    z-index: 4;
+    color: white;
+    padding: 10px;
+	width: 120px;
+	margin: 10px;
+    gap: 10px;
+    align-items: center;
+	border-radius: 4px;
+}
+#relationshipContainer {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+	justify-content: center;
+    gap: 10px;
+}
+
+input {
+	color: black;
+	animation: glowDark 2s infinite ease-in-out;
+}
