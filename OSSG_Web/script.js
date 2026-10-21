@@ -23,6 +23,8 @@ let p1playedUNO = false;
 let p2attendingBrothersCouncil = false;
 let p2bcPlan = "none";
 let p2didBubblePrank = false;
+let p2invitedAlice = false;
+let p2invitedJane = false;
 
   const slides = document.querySelectorAll('.slide')
 function showSlide(name) {
@@ -302,6 +304,7 @@ function theEnormousDialogueFunction(id) {
 			`*NEXT*`, ``, ``, "1.2.17", null, null);
 		break;
 		case "1.2.17":
+			changeBackground("part1/p1_playing_uno.png");
 			renderNode(`The Narrator: Game on! Tommy starts out first, and plays a Draw 4. Yikes. You somehow know that he fails being challenged almost 90% of the time. You have two Draw 4s in your deck. Do you decide to continue the drawing war, or challenge Tommy?`,
 			`(Challenge Tommy!)`, `(Play your Draw 4.)`, ``, "1.2.18", "1.2.19", null);
 		break;
@@ -452,10 +455,14 @@ function theEnormousDialogueFunction(id) {
 		// Part 2 code
 		case "2.1.1":
 			if (p2attendingBrothersCouncil ) {
+				changeBackground("kane_bedroom.png");
 				renderNode(`The Narrator: After breakfast (and 30 minutes of math worksheets on Tommy's end), you all congregate in Kane's bedroom after being invited on CatsApp. This morning, your brothers are in an especially rowdy mood. You have absolutely no clue why.`,
 				`*NEXT*`, ``, ``, "2.1.2", null, null);
 			} else {
-				// nothing for now.
+				changeBackground("downstairs_hallway.png");
+				renderNode(`The Narrator: You are texting your friends on CatsApp when all of a sudden... Tommy: It's going to be so funny! The entire kitchen will fill with suds! The Narrator: Uh-oh. That does not sound good. Do you want to do nothing... or convince your brothers to do something else?`, 
+				`Ugh, it's none of my business. I'm not doing anything.`, `Are you crazy?! I've got to do something!`, null,
+				"2.1.33b", "2.1.13", null);
 			}
 		break;
 		case "2.1.2": 
@@ -504,9 +511,16 @@ function theEnormousDialogueFunction(id) {
 			"2.1.33", "2.1.13", null);
 			break;
 		case "2.1.13":
-			renderNode(`Sarah: Wait! Tommy rolls his eyes. Ugh. Of course you were going to be the spoilsport. Tommy: what is it?`,
+			if (p2attendingBrothersCouncil) {
+				renderNode(`Sarah: Wait! Tommy rolls his eyes. Ugh. Of course you were going to be the spoilsport. Tommy: what is it?`,
 			`*NEXT*`, ``, ``, 
 			"2.1.14", null, null);
+			} else {
+				renderNode(`Sarah: WAIT! I overheard what you guys were doing! It's not a good idea! Tommy: YOU WEREN'T SUPPOSED TO BE LISTENING IN!!!! Sarah: That doesn't matter!`, 
+					`*NEXT*`, ``, ``, 
+					"2.1.14", null, null);
+				
+			}
 		break;
 		case "2.1.14": 
 			renderNode(`Sarah: I don't think this prank is a good idea at all! If we do it, we could get into big trouble! And clean until the end of our days!`,
@@ -599,9 +613,9 @@ function theEnormousDialogueFunction(id) {
 		case "2.1.31": 
 			if (p2didBubblePrank) {
 				updateRelationships("p", -1);
-				renderNode(`The Narrator: You all run upstairs to the living room and find your parents. They were just about to go on their "weekly shopping date". After breathlessly explaining about the talent show, your mom speaks up. Mom: ...yes. But I don't remember seeing anything about Donkey Doodily showing up (checks phone)... wait a moment. You're right. Wow. My guess is you guys want to sign up? (all the brothers cheer wildly) Tommy: TEN THOUSAND DOLLARS, HERE I COME!! Mom: FIRST, clean up the bubbles, and then you can start planning. That will be your only punishment, since it seems like nothing else is damaged.  Alright. Applications are due by next week. Just simply agree on what you're going to do. (everyone cheers)`, 
+				renderNode(`The Narrator: You all run to the living room and find your parents. They just returned from their weekly shopping date. Your parents are totally livid! Mom: Alright... whose idea was it to fill the entire kitchen with suds?!!? (all the brothers point at Tommy, who flashes a sheepish grin) Mom: Tommy... alright. As punishment, you will clean up all the suds! You will receive no further punishment. (a smile flashes) However... since you're here, I've got great news for you! There is a talent show coming up in several weeks on August 1st! The prize is $10,000 for the grand prize winner! And -- *phone chirps* Excuse me one moment. Kids, it's your Aunt Martha. Everyone say hi! All the brothers: Hi, Aunt Martha!`, 
 			`*NEXT*`, ``, ``, 
-			"2.1.32", null, null);
+			"2.1.31a", null, null);
 			} else {
 				renderNode(`The Narrator: You all run upstairs to the living room and find your parents. They were just about to go on their "weekly shopping date". After breathlessly explaining about the talent show, your mom speaks up. Mom: ...yes. But I don't remember seeing anything about Donkey Doodily showing up (checks phone)... wait a moment. You're right. Wow. My guess is you guys want to sign up? (all the brothers cheer wildly) Tommy: TEN THOUSAND DOLLARS, HERE I COME!! Mom: Alright. Applications are due by next week. Just simply agree on what you're going to do. (everyone cheers)`, 
 			`*NEXT*`, ``, ``, 
@@ -609,22 +623,232 @@ function theEnormousDialogueFunction(id) {
 			}
 			
 		break;
+		case "2.1.31a": 
+			renderNode(`Mom: What a pleasant surprise for you to call us, Aunt Martha! What is it? Aunt Martha: All my kids are totally thrilled! You didn't see the Siblingtown News broadcast? Mom: No... why? Aunt Martha: Because, Donkey Doodily is coming to town for the talent show! He's going to host the whole thing! (whispers) Between you and me, Ana (Sarah's mother), I like the show as well, but don't you DARE tell anybody that! Mom: Oh, wow. Let me check... Oh... you're right! I am sure Xavier would be totally thrilled! He LOVES Donkey Doodily. Well, thanks for letting me know, Aunt Martha! Can I call you back? Aunt Martha: Yes, of course! (Mom hangs up the phone) Mom: Well, kids, what do you think? (All the brothers, especially Xavier, start to cheer. Xavier looks like he is practically going to explode from excitement. Seriously. No joke.) Mom: You can all start preparing for the talent show... AFTER you get all those bubbles cleaned up! (your brothers quiet down. Oops.) If you all work together, it shouldn't take that long. Now if you'll excuse me, Aunt Martha seems like she wants to talk to me.`,
+			`*NEXT*`, ``, ``, 
+			"2.1.32", null, null);
+			break;
 		case "2.1.32": 
 			if (p2bcPlan == "pranks") {
-				
+				renderNode(`The Narrator: Tommy gathers all the brothers into the living room for an emergency meeting. Tommy: Alright, men! We will begin our planning for the talent show immediately -- oh, wait, Sarah, you had an idea for the prank war. Come on back down to Kane's Cave and tell us more about it!`,
+				`*NEXT*`, ``, ``, 
+				"2.2.1", null, null);
 			} else if (p2bcPlan == "bubble") {
-				
+				renderNode(`Tommy: Psst. PSST! Remember the bubble pool party? Sarah: Oh, yeah. Hey, Mom, it is awfully hot out. Is it possible for us to have a bubble pool party today? Mom: Of course! All you have to do is just set the kiddie pool up! (everyone starts cheering)`, 
+				`*NEXT*`, ``, ``, 
+				"2.1.36", null, null);
 			} else {
-				renderNode(
+				renderNode(`The Narrator: It is the evening. You are officially exhausted from helping your brothers getting out all of the bubbles from the kitchen.`, 
+				`*NEXT*`, ``, ``, 
+				"2.1.32a", null, null);
+				
 			}
 		break;
-		case "2.1.33": 
+		case "2.1.32a": 
+			renderNode(`The Narrator: It is now 9:00 PM. You head off to bed. Sweet dreams!`,
+			`*NEXT*`, ``, ``, 
+			"2.dream.1", null, null);
 			
+			break;
+		case "2.1.33": 
+		p2didBubblePrank = true;
+			renderNode(`Sarah: Come on... let's just go ahead and do the prank anyway. After all, this is the 200th Meeting of the Brothers' Council. Why not go down... with a bang? (All the brothers cheer.)`, 
+			`*NEXT*`, ``, ``, 
+			"2.1.34", null, null);
+			
+		break;
+		case "2.1.33b": 
+			p2didBubblePrank = true;
+			renderNode(`The Narrator: You decide to do nothing. You wait for your brothers to come out...`, 
+			`*NEXT*`, ``, ``, 
+			"2.1.34", null, null);
+		case "2.1.34": 
+			if (p2attendingBrothersCouncil) {
+				renderNode(`The Narrator: As you and your brothers head upstairs, your parents are still in the living room. Then, they head out the door for their weekly Sunday date shopping trip. It's been their ritual ever since they got married. You stay behind with Kane and all of his high-tech gadgets (including security cameras set up all around the house to help keep an eye on things), to help keep watch, in case they come home early, and Xavier, who is too engrossed with his tablet to care. Tommy puts in a LOT of dish detergent into the dishwasher. It is already running. Tommy: "Hey, Mr. Dishwasher! I think you forgot something!" He closes the door. The dishwasher begins to overflow... (ten minutes later) The kitchen is covered in suds! Your parents are going to be home soon. Meanwhile, Tommy and Carl are having the time of their lives.`, 
+			`*NEXT*`, ``, ``, 
+			"2.1.35", null, null);
+			} else {
+				renderNode(`The Narrator: As Tommy and your other brothers leave the room, your parents head out the door for their weekly Sunday date shopping trip. It's been their ritual ever since they got married. Tommy catches you right there. Tommy: You're NOT going to ruin this! No, no, NO! You have to stay behind with Kane and all of his high-tech gadgets (including security cameras set up all around the house to help keep an eye on things), to help keep watch, in case they come home early, and Xavier, who is too engrossed with his tablet to care. Tommy puts in a LOT of dish detergent into the dishwasher. It is already running. Tommy: "Hey, Mr. Dishwasher! I think you forgot something!" He closes the door. The dishwasher begins to overflow... (ten minutes later) The kitchen is covered in suds! Your parents are going to be home soon. Meanwhile, Tommy and Carl are having the time of their lives.`, 
+			`*NEXT*`, ``, ``, 
+			"2.1.35", null, null);
+			}
+			
+		break;
+		case "2.1.35": 
+			renderNode(`The Narrator: Two hours later, your parents return home. Dad: Ah... I can't wait for a nice BLT sandwich, without the B! Mom: Me, too. I am totally famished. The Narrator: Uh-oh. They're entering the kitchen! Dad: *GASP!* What happened here?! Mom: *totally dumbfounded* I love a clean house... but I didn't mean THIS clean. Dad: ... ... <b><i><u>KIDS!!!!!!!!!!</u></i></b>`,
+			`*NEXT*`, ``, ``, 
+			"2.1.31", null, null);
+		break;
+		case "2.1.36": 
+			renderNode(`The Narrator: That afternoon, you and your brothers have a wonderful time with the bubble pool party!`,
+			`*NEXT*`, ``, ``,
+			"2.1.32a", null, null);
+		break;
+		case "2.2.1":
+			renderNode(`(ten minutes later, all of you return to Kane's bedroom) Sarah: Okay, so, I call this the Sibling Prank-Off! We invite all of our friends. We will all split up into four teams, each one led by one of us. You three, with all of your buddies, will work together to pull off as many pranks as possible. The more embarrassing, gross, or spectacular the prank, the BETTER. However... there will be a few rules to keep things from getting too out of hand. Tommy: UGH. RULES!? Sarah: Don't worry, they aren't going to be super bad.`,
+				`*NEXT*`, ``, ``, 
+				"2.2.2", null, null);
+		
+		break;
+		case "2.2.2": 
+			renderNode(`Sarah: First rule: no pranking adults AT ALL. Pranks must be done strictly between teams in order to qualify! Second: the pranks must never cause actual PHYSICAL injury to anybody!! If they do, the prank will be disqualified and you must help make things right. Okay, here's how the pranks will be scored. Pranks will be scored based on three factors: embarrassment, grossness, and comic effect. `, 
+			`*NEXT*`, ``, ``, 
+			"2.2.3", null, null);
+		break;
+		case "2.2.3": 
+			renderNode(`Kane: Sounds pretty good to me. Sarah: We'll split up into five teams, one for each of us. Now, Xavier is the youngest, so he will not be participating in the competition... (Xavier: "HEY!!!!") but he will JUDGE it! I'll tell you what to do, Xavier. It will be so simple.`,
+			`*NEXT*`, ``, ``,
+			"2.2.4", null, null);
+		case "2.2.4": 
+			renderNode(`Sarah: Tommy? How does that sound to you? Tommy: I LOVE IT!!!! Sarah: Excellent. When should we start the competition? Tommy: (thinks for a moment) In two days. We'll need time to prepare! Sarah: Works fine by me. You boys assemble your teams... and I'll assemble mine. There are no limits to the size of teams you can have. Now go forth and pull off preposterous pranks!`,
+			`*NEXT*`, ``, ``, 
+			"2.2.5", null, null);
+		break;
+		case "2.2.5": 
+			renderNode(`(All the brothers cheer.) The Narrator: Welp, you should definitely prep up for the Prank War! Let's see... who do you want to invite to be on your team?`, 
+			`Alice, my BFF!`, `Jane, my OTHER BFF!`, `I'll go about this by myself.`, 
+			"2.2.6", "2.2.7", "2.2.8");
+			break;
+		case "2.2.6": 
+			p2invitedAlice = true;
+			renderNode(`The Narrator: You call Alice. She answers on the first ring. Alice: Hey, Sarah! What's UP!?! Got any new BeeBies lately?! Sarah: Nope! But I've got something far better to tell ya! My brothers and I are planning the most epic prank competition! And you're invited! Want in? Alice: OH, YEAH!!!! Remember that time they swapped out my burger with a PlayDoh one -- and it looked so real, I didn't even realize what it was until I ate it? Ugh... *shudder* I couldn't look at a burger for weeks! I'M IN! I've got to show your brothers who's boss! Can you give me the details? Sarah: Yep! I'll send it to you by FakeText. Alice: SWEET! *ends call*`, 
+			`*NEXT*`, ``, ``, 
+			"2.2.5", null, null);
+		break;
+		case "2.2.7": 
+			p2invitedJane = true;
+			renderNode(`The Narrator: You call Jane. She answers on the second ring. Jane: Hey, Sarah! Ready for our unofficial honorary summer school hangout? Sarah: Yeah! I can't wait for that! I also have something I wanted to tell you! Remember that time when my brothers snuck up to us while we were studying... and swapped out your essay that took you three weeks to write?! Jane: UGH, YES! I got an A on my paper, but for all the wrong reasons! My teacher laughed at my hilarious description of pranks! It was SO embarrassing! I managed to get the right essay turned in... and I got an A for that... but still... Sarah: Well, my brothers and I are planning a prank competition. We're all splitting off into teams. Wanna join us? Jane: GASP! YOU BET! Sarah: Great, I'll give you the details.`, 
+			`*NEXT*`, ``, ``, 
+			"2.2.5", null, null);
+			
+		break;
+		case "2.2.8": 
+			renderNode(`The Narrator: Are you sure? Your brothers are REALLY good pranksters!`, 
+			`Yes, I'm sure. It's getting late anyway.`, `No, I've changed my mind.`, ``, 
+			"2.1.32a", "2.2.5", null);
+		break;
+		case "2.dream.1": 
+			changeBackground("part2/p2_dream_s1.png");
+			renderSceneAnimations(["startDreamScene"]);
+			renderNode(`The Narrator: Hmm... WHOA. Okay, where are we? Oh, you're relaxing in the living room at night. Now, how did THAT happen? I thought you were in bed!`, 
+			`*NEXT*`, ``, ``,
+			"2.dream.2", null, null);
+			
+		break;
+		case "2.dream.2": 
+			renderNode(`(Tommy laughs evilly. Uh-oh. And it sounds like it's coming right from the kitchen!) The Narrator: Come on, let's go and see what that was!`, 
+			`Run to the kitchen!`, `` ,``, 
+			"2.dream.3", null, null);
+		break;
+		case "2.dream.3":
+			changeBackground("part2/p2_dream_s2.png");
+			
+			renderNode(`Carl: We will turn this kitchen into a bubbly paradise! Think of the suds!`,
+			`*NEXT*`, ``, ``, 
+			"2.dream.4", null, null);
+		break;
+		case "2.dream.4": 
+			renderNode(`Tommy: As soon as I put in enough soap into the dishwasher...`, 
+			`*NEXT*`, ``, ``, 
+			"2.dream.5", null, null);
+		break;
+		case "2.dream.5": 
+			renderNode(`Sarah: NOOOOOOOOOO! Tommy, DON'T DO IT!! Tommy: Too late.`,
+			`*NEXT*`, ``, ``, 
+			"2.dream.6", null, null);
+		break;
+		case "2.dream.6": 
+			changeBackground("part2/p2_dream_s3.png");
+			renderNode(`The Narrator: The dishwasher begins to overflow. A disgusting mix of suds and grease start to fill the kitchen. Somehow, the entire house fills to the brim with bubbles! Everyone, including the brothers, runs straight out of the house in a panic. You suddenly see your parents outside. Phooey.`, 
+			`*NEXT*`, ``, ``, 
+			"2.dream.7", null, null);
+		break;
+		case "2.dream.7": 
+			renderNode(`Mom: Tommy, what have you done?!`, 
+			`*NEXT*`, ``, ``, 
+			"2.dream.8", null, null);
+		break;
+		case "2.dream.8": 
+			renderNode(`The Narrator: Wait a moment... bubbles don't fly and get bigger like that. Wait a moment. You're in a dream! Do you want to see what happens next?`, 
+			`Oh, YEAH! It can't be that bad, can it?`, `No WAY! I want to wake up right now!!!!!! This is getting to be too scary already!`, ``, 
+			"2.dream.9", "2.end.1", null);
+		break;
+		case "2.dream.9": 
+		changeBackground("part2/p2_dream_s3a.png");
+			renderNode(`The Narrator: Oh, wow. It can't be. It's... a soapy storm!!! You run inside immediately and turn your phone on to haul up the news. <br>
+			Siblingtown News Announcer 1: I'm your host, Hank, and today we are going to be analyzing, minute by minute, the sudden soapy storm that has come upon our city! Is it a mad scientist's experiment gone horribly wrong? Or is it... a prank? And if so, by whom? By current estimates, this could knock out our infrastructure within the next five minutes!<br>
+			Siblingtown News Announcer 2: That's right. I'm your co-host, Linda. We could be looking at massive power outages and severe damage done to the economy over months! Stay tuned.<br>
+			The Narrator: Suddenly, the lights go out. Your parents and siblings are running to the city square. You run to join them.`,
+			`*NEXT*`, ``, ``, 
+			"2.dream.10", null, null);
+		break;
+		case "2.dream.10": 
+			changeBackground("part2/p2_dream_s4.png");
+			renderNode(`The Narrator: What. In. The. Living. World. It's literally raining bubbles. Yikes. And all the power is out. And there is a HUGE crowd in the city square! Tommy really did it this time!<br>
+			Person 1: Who could have caused this... this... catastrophe? <br>
+			Person 2: I know exactly who did it. <br>
+			Person 3: We ALL know who did it. <br>
+			Crowd: Tommy!!!!!!!! <br>
+			Sarah: How on earth do you know my brother anyway?! <br>
+			Tommy: What?! I just wanted to make a few bubbles!!!`, 
+			`*NEXT*`, ``, ``, 
+			"2.end.1", null, null);
+			break;
+		
+		case "2.end.1": 
+			renderSceneAnimations(["endDreamScene"]);
+			changeBackground("sarah_bad_dream.png");
+			renderNode(`Sarah: *wakes up panting* UGH! What a crazy dream! I hope Tommy never pulls something like THAT off!`, 
+			`*NEXT*`, ``, ``,
+			"2.end.2", null, null);
+		break;
+		case "2.end.2": 
+			renderNode(`The Narrator: Do you really think that Tommy can't pull that off? Seems like an awfully smart fellow to me!`,
+			`*NEXT*`, ``, ``, 
+			"2.end.3", null, null);
+		break;
+		case "2.end.3": 
+			renderNode(`Sarah: You never know... one of these days, he might actually be able to do it!!`, 
+			`*NEXT*`, ``, ``,
+			"2.end.4", null, null);
+		break;
+		case "2.end.4": 
+			changeBackground("grownup_living_room.png")
+			renderNode(`*end of flashback* Abby: Wow. Did Tommy really try to fill up the whole kitchen with bubbles?`, 
+			`*NEXT*`, ``, ``, 
+			"2.end.5", null, null);
+		break;
+		case "2.end.5": 
+			if (p2didBubblePrank) {
+				renderNode(`Sarah: *laughs* Unfortunately, yes. We got into a LOT of trouble for that deed.`, 
+				`*NEXT*`, ``, ``, 
+				"2.end", null, null);
+			} else {
+				renderNode(`Sarah: *laughs* Yep. good thing that thing didn't happen! Bea: Wow... I guess we CAN get along! Sarah: Yes, you can!`, 
+				`*NEXT*`, ``, ``, 
+				"2.end", null, null);
+			}
+		case "2.end": 
+			renderNode(`You have now reached the end of Part 2. If you have received an email from Shiloh personally, please respond to the email he sent. Updates will be released periodically. Thank you for trying out the alpha version of the Older Sibling's Survival Guide!`, 
+			`*NEXT*`, ``, ``, 
+			"2.exit", null, null);
+		break;
+		case "2.exit": 
+			maxChapterIndex = 2; 
+			hideSlide();
+			showSlide("chapter-selection");
+			setChapter(2);
 		break;
 	}	
 }
 
-
+function renderSceneAnimations(animationArray) {
+		
+	document.getElementById("background").classList = "";
+	animationArray.forEach((item) => {
+		document.getElementById("background").classList.add(item);
+	});
+}
 	
 function changeBackground(imgName) {
 	document.getElementById("background").src = "./background/" + imgName;

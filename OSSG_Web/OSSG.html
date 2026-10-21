@@ -10,6 +10,7 @@
 	<button id="play1">Play</button>
 	<div class="slide" id="main-menu">
 		<h1>Welcome to the Older Sibling's Survival Guide</h1>
+		<p><b>PRE-Alpha release, v0.1</b></p>
 		<button id="play">Play!</button>
 		<button id="credits">Credits</button>
 	</div>
@@ -28,42 +29,45 @@
 		</div>
 	</div>	
 	<div class="slide" id="dialogue">
-		<div id="relationshipContainer">
-    <div id="siblingRelationship" class="score">
-        <p>Sibling Relationship:</p>
-        <p id="siblingScore">😐</p>
-    </div>
+			<img id="background" src="./background/sarahs_bedroom.png">
+		<p id="scoreNotification"></p> 
+		<div id="dialogueDIV">
+			<div id="relationshipContainer">
+					<div id="siblingRelationship" class="score">
+						<p>Sibling Relationship:</p>
+						<p id="siblingScore">😐</p>
+					</div>
 
-    <div id="parentRelationship" class="score">
-        <p>Parent Relationship:</p>
-        <p id="parentScore">😐</p>
-    </div>
-</div>
-		
-		<p id="dialogueP"></p>
-		<img id="background" src="./background/sarahs_bedroom.png">
-		<img id="character" src="">
-		<audio autoplay id="music" loop>
-			<source src=""></source>
-		</audio>
-		<audio autoplay id="characterAudio">
-			<source src=""></source>
-		</audio>
-		<audio autoplay id="sfx">
-			<source src=""></source>
-		</audio>
-		<div class="choices-container">
-			<button id="response1"></button>
-			<button id="response2"></button>
-			<button id="response3"></button>
-		</div>
-		
+					<div id="parentRelationship" class="score">
+						<p>Parent Relationship:</p>
+						<p id="parentScore">😐</p>
+					</div>
+			</div>
+			<div class="choices-container">
+				<button id="response1"></button>
+				<button id="response2"></button>
+				<button id="response3"></button>
+			</div>
+			<p id="dialogueP"></p>
+			
+			<img id="character" src="">
+			<audio autoplay id="music" loop>
+				<source src=""></source>
+			</audio>
+			<audio autoplay id="characterAudio">
+				<source src=""></source>
+			</audio>
+			<audio autoplay id="sfx">
+				<source src=""></source>
+			</audio>
+			
+		</div>	
 	</div>
 	<div class="slide" id="creditsSlide">
 		<h1>Credits</h1>
 		<p>Story by Shiloh S. Space</p>
 		<p>All images have been created with various AI platforms. ChatGPT and Microsoft Designer are just two of the ones the author remembers using.</p>
-		<p>Voices: (soon to be added!)</p>
+		<p>Voices: (hope to add this!)</p>
 		<p>Planned voices:</p>
 		<ul>
 			<li>The Narrator: Shiloh S. Space</li>
